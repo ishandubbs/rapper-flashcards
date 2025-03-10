@@ -4,11 +4,25 @@ import "./Flashcards.css"
 
 const FlashcardList = ({cards}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isFlipped, setIsFlipped] = useState(false);
+    const [streak, setStreak] = useState(0);
+    const [maxStreak, setMaxStreak] = useState(0);
+    const [masteredCards, setMasteredCards] = useState([]);
 
     const handleNext = () => {
-        setIsFlipped(false);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    }
+
+    const handlePrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+    }
+
+    const handleMastered = () => {
+        const masteredCard = cards[currentIndex];
+        setMasteredCards([...masteredCards, masteredCard])
+        setStreak(streak + 1)
+        if (streak + 1 > maxStreak) setMaxStreak(streak + 1);
+
+        const newDeck = cards.filter((_, index))
     }
 
     return (
