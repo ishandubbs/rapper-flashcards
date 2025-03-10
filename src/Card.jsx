@@ -1,10 +1,26 @@
 import React, { useState } from "react";
 import './Card.css';
 
-const Card = ({ question, answer, img, isFlipped, setIsFlipped, difficulty }) => {
-    const handleClick = () => {
+function Card({ question, answer, img, difficulty, onNext, onPrevious, onMaster }) {
+    const [isFlipped, setIsFlipped] = useState(false);
+    const [userInput, setUserInput] = useState('');
+    const [feedback, setFeedback] = useState('')
+
+    const handleFlip = () => {
         setIsFlipped(!isFlipped);
+        setFeedback('');
     };
+
+    const handleSubmit = () => {
+        const normalizedInput = userInput.trim().toLowerCase();
+        const normalizedAnswer = userInput.trim().toLowerCase();
+
+        if (normalizedInput === normalizedAnswer) {
+            setFeedback('✅ Correct!');
+        } else {
+            setFeedback('❌ Incorrect, try again!')
+        }
+    }
 
     return (
         <div className="card-container">
