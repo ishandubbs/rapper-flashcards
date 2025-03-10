@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 60vh;
 }
 
 .card {
@@ -66,13 +66,25 @@
 }
 
 .easy {
-  background-color: lightgreen;
+  background-color: lightgreen !important;
 }
 
 .medium {
-  background-color: yellow;
+  background-color: yellow !important;
 }
 
 .hard {
-  background-color: red;
+  background-color: red !important;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
