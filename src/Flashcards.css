@@ -1,46 +1,20 @@
-.flashcard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120vh;
-    height: 100vh;
-    background-color: #28a745;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-.flashcard {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.3s;
+.flashcards {
+  max-width: 600px;
+  margin: 0 auto;
 }
-  
-.flashcard-buttons {
-    margin-top: 15px;
-  }
-  
-.flashcard-buttons button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-.flashcard-buttons button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
+
+.mastered-cards {
+  margin-top: 20px;
+}
+
+.mastered-cards ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mastered-cards li {
+  background-color: #f4f4f4;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
